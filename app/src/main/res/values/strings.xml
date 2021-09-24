@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">GreenGo MAD Project</string>
+    <string name="headingOneHome">GreenGo</string>
+    <string name="homeHeading">GreenGo</string>
+    <string name="homeaHeading2">Enjoy Eating</string>
+    <string name="homePara">All the fresh food on your phone</string>
+    <string name="homeButtonText">Get Started</string>
+    <string name="signUpName">Enter Your Name</string>
+    <string name="signUpMobile">Enter Your Mobile Number</string>
+    <string name="registerBtn">Register</string>
+    <string name="loginBtn">Login</string>
 </resources>
