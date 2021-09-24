@@ -9,4 +9,5 @@
     <string name="signUpMobile">Enter Your Mobile Number</string>
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
+    <string name="registerbtn">Register</string>
 </resources>

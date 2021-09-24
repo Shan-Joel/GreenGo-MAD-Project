@@ -13,15 +13,14 @@
             android:name=".MainActivity2"
             android:exported="true" />
         <activity
-            android:name=".SignUp_Form"
+            android:name=".Login_Form"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".Login_Form">
+        <activity android:name=".SignUp_Form">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
