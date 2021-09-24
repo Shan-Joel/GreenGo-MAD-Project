@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".cartThree"
+            android:exported="true" />
+        <activity
+            android:name=".cartOne"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity android:name=".cartTwo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
