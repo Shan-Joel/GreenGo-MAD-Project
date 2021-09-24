@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#421AB15B"
-    tools:context="@string/headingOneHome">
+    tools:context=".Login_Form">
 
     <ImageView
         android:id="@+id/loginImage"
@@ -14,31 +14,14 @@
         android:layout_height="359dp"
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="200dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
         app:srcCompat="@drawable/login2" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="321dp"
-        android:layout_height="47dp"
-        android:background="@drawable/white_background"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526">
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -52,45 +35,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526">
+        app:layout_constraintVertical_bias="0.595">
 
         <EditText
             android:id="@+id/editTextTextPersonName"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginLeft="20dp"
             android:background="@drawable/editext_white"
             android:ems="10"
+            android:layout_marginLeft="20dp"
             android:hint="Enter Your Email"
             android:inputType="textPersonName"
             tools:ignore="TouchTargetSizeCheck" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="321dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/white_background"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.526">
-
-        <EditText
-            android:id="@+id/editTextTextPersonEmail"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/editext_white"
-            android:ems="10"
-            android:hint="Enter Your Password"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck" />
-
     </LinearLayout>
 
     <Button
@@ -109,7 +65,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintVertical_bias="0.348" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="321dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/white_background"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649">
+
+        <EditText
+            android:id="@+id/editTextTextPersonEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/editext_white"
+            android:ems="10"
+            android:hint="Enter Your Password"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

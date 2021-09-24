@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#421AB15B"
-    tools:context="@string/headingOneHome">
+    tools:context=".SignUp_Form">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -131,6 +131,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:layout_constraintVertical_bias="0.584" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
