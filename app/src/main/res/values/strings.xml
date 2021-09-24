@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">GreenGo MAD Project</string>
+    <string name="favourite">FAVOURITES</string>
+    <string name="favouritsbar">FAVOURITS</string>
+    <string name="appletext">Apple</string>
+    <string name="pick1">Pickup from organic farms</string>
+    <string name="fav">FAVOURITES</string>
+    <string name="appletext1">Apple</string>
+    <string name="pick01">Pick up from organic farms</string>
+    <string name="p01">160Per/kg</string>
+    <string name="btn1">ADD</string>
+    <string name="apprtext1">Appricot</string>
+    <string name="pick2">Pickup from organic farms</string>
+    <string name="add2">ADD</string>
+    <string name="p02">200Per/kg</string>
+    <string name="oniontext1">Onion</string>
+    <string name="pick3">Pick up from organic farms</string>
+    <string name="add3">ADD</string>
+
 </resources>
