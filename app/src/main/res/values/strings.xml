@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">GreenGo MAD Project</string>
+    <string name="pay_btn">Click To Pay</string>
+    <string name="phone">Your Contact Number</string>
+    <string name="enter_details">Enter Your Delivery Details</string>
+    <string name="enter_address">Your Address</string>
+    <string name="checkout_header">Checkout</string>
+    <string name="select_payment">Choose Your Payment Method</string>
+    <string name="card_btn">One Time Payment</string>
+    <string name="cod_btn">Cash On Delivery</string>
+    <string name="tip_1">Only You Have To Make Payment To Our Delivery Agent.</string>
+    <string name="tip_2">Due to the Prevailing Situation Of the Country, Deliveries Might Get Delayed Than Usual.</string>
 </resources>
