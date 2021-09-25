@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.greengomadproject">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,14 +16,13 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-
         <activity
-            android:name=".Login_Form"
+            android:name=".SignUp_Form"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".SignUp_Form">
+        <activity android:name=".Login_Form">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

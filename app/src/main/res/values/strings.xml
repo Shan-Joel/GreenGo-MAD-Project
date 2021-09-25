@@ -10,4 +10,6 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+    <string name="alreadyHaveAccount">Already a User? Login Here</string>
+    <string name="newUserLink">New User? Register Here</string>
 </resources>
