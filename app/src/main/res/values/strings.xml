@@ -21,6 +21,16 @@
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
     <string name="card_details">Enter Your Credit/Debit Card Details</string>
-    <string name="amont_text">Amount</string>
+    <string name="amont_text">Amount :</string>
     <string name="lkr">LKR</string>
+    <string name="total">00000.00</string>
+    <string name="save_card">Save yor card for future transactions.</string>
+    <string name="card_number">Card Nummber</string>
+    <string name="expiry_date">Expiry MM  / YY</string>
+    <string name="cvv">CVV</string>
+    <string name="pay_now_btn">PAY NOW</string>
+    <string name="done">Your Order Is Conformed !</string>
+    <string name="thank_you">Thank You For Shopping WIth Us</string>
+    <string name="saved_cards">Saved Card</string>
+    <string name="review">Rate Us</string>
 </resources>

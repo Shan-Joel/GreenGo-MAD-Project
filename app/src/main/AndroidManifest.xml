@@ -13,12 +13,14 @@
             android:name=".card_details"
             android:exported="true" />
         <activity
+            android:name=".checkout"
+            android:exported="true" />
+        <activity
             android:name=".payment_type"
             android:exported="true" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-
         <activity
             android:name=".Login_Form"
             android:exported="true" />
@@ -28,7 +30,7 @@
         <activity
             android:name=".SignUp_Form"
             android:exported="true" />
-        <activity android:name=".checkout">
+        <activity android:name=".completed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
