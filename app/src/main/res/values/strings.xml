@@ -21,4 +21,6 @@
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
     <string name="card_details">Enter Your Credit/Debit Card Details</string>
+    <string name="amont_text">Amount</string>
+    <string name="lkr">LKR</string>
 </resources>
