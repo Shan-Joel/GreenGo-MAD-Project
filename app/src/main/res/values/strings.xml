@@ -33,4 +33,9 @@
     <string name="thank_you">Thank You For Shopping WIth Us</string>
     <string name="saved_cards">Saved Card</string>
     <string name="review">Rate Us</string>
+    <string name="card_number1">Card Number</string>
+    <string name="view_card">View</string>
+    <string name="update_btn">Update</string>
+    <string name="delete_btn">Delete</string>
+    <string name="your_card">Your Card</string>
 </resources>

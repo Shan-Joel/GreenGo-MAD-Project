@@ -30,11 +30,11 @@
         android:layout_marginTop="236dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/card_details"
+        app:layout_constraintTop_toTopOf="@+id/your_card"
         app:srcCompat="@drawable/rectangle3" />
 
     <TextView
-        android:id="@+id/card_details"
+        android:id="@+id/your_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -49,13 +49,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/card_number"
+        android:id="@+id/view_card_number"
         android:layout_width="351dp"
         android:layout_height="48dp"
         android:layout_marginTop="128dp"
         android:ems="10"
+        android:hint="@string/card_number1"
         android:inputType="textPersonName"
-        android:text="@string/card_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,12 +67,12 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Expiry MM / YY"
         android:inputType="textPersonName"
-        android:text="@string/expiry_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.154"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_number" />
+        app:layout_constraintTop_toBottomOf="@+id/view_card_number" />
 
     <EditText
         android:id="@+id/cvv"
@@ -80,11 +80,11 @@
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="CVV"
         android:inputType="textPersonName"
-        android:text="@string/cvv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/expiry_date"
-        app:layout_constraintTop_toBottomOf="@+id/card_number" />
+        app:layout_constraintTop_toBottomOf="@+id/view_card_number" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -107,7 +107,7 @@
         android:textColor="#1C7A45"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_number"
+        app:layout_constraintBottom_toTopOf="@+id/view_card_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.211"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +126,7 @@
         android:textColor="#1C7A45"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_number"
+        app:layout_constraintBottom_toTopOf="@+id/view_card_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/total"
@@ -145,7 +145,7 @@
         android:textColor="#1C7A45"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/card_number"
+        app:layout_constraintBottom_toTopOf="@+id/view_card_number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/amont_text"

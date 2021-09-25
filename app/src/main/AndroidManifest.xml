@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+            android:name=".completed"
+            android:exported="true" />
+        <activity
             android:name=".card_details"
             android:exported="true" />
         <activity
@@ -30,7 +33,7 @@
         <activity
             android:name=".SignUp_Form"
             android:exported="true" />
-        <activity android:name=".completed">
+        <activity android:name=".view_card">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

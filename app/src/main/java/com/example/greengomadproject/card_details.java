@@ -15,7 +15,7 @@ public class card_details extends AppCompatActivity {
         setContentView(R.layout.activity_card_details);
 
 
-        final EditText card_number = findViewById(R.id.card_number);
+        final EditText card_number = findViewById(R.id.view_card_number);
         final EditText expiry_date = findViewById(R.id.expiry_date);
         final EditText cvv = findViewById(R.id.cvv);
         Button pay_now_btn = findViewById(R.id.pay_now_btn);
