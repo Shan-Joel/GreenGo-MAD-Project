@@ -29,5 +29,6 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+    <string name="p03">120Per/kg</string>
 
 </resources>

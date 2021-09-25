@@ -9,9 +9,9 @@
 
     <TextView
         android:id="@+id/fav"
-        android:layout_width="408dp"
-        android:layout_height="59dp"
-        android:background="#25B564"
+        android:layout_width="364dp"
+        android:layout_height="49dp"
+
         android:text="@string/fav"
         android:textColor="#311B92"
         android:textSize="20sp"
@@ -52,6 +52,9 @@
             android:layout_marginEnd="116dp"
             android:layout_marginRight="116dp"
             android:text="@string/appletext1"
+            android:textColor="#1C7A45"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +96,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="400dp"
+        android:layout_width="403dp"
         android:layout_height="167dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -120,6 +123,9 @@
             android:layout_width="83dp"
             android:layout_height="29dp"
             android:layout_marginTop="8dp"
+            android:textColor="#1C7A45"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:text="@string/apprtext1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
@@ -164,8 +170,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="398dp"
-        android:layout_height="163dp"
+        android:layout_width="403dp"
+        android:layout_height="169dp"
         android:layout_marginTop="24dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,6 +195,9 @@
             android:layout_width="72dp"
             android:layout_height="23dp"
             android:layout_marginTop="16dp"
+            android:textColor="#1C7A45"
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:text="@string/oniontext1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.12"
@@ -219,6 +228,16 @@
             app:layout_constraintTop_toBottomOf="@+id/pick3"
             app:layout_constraintVertical_bias="0.407" />
 
+        <TextView
+            android:id="@+id/p03"
+            android:layout_width="81dp"
+            android:layout_height="21dp"
+            android:text="@string/p03"
+            app:layout_constraintBottom_toTopOf="@+id/pick3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/oniontext1"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,7 +246,6 @@
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
