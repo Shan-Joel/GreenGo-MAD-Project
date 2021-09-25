@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "918452462701",
+    "project_id": "greengo-mad-project",
+    "storage_bucket": "greengo-mad-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918452462701:android:13b56061b12e1a0b350b64",
+        "android_client_info": {
+          "package_name": "com.example.greengomadproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918452462701-g6b41o5l7s854m35kbtouel7ld1jekk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwvWkm3qZ7JdWTr2XiC-tqb9nFYZHvGYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918452462701-g6b41o5l7s854m35kbtouel7ld1jekk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
