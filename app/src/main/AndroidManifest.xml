@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
-
+            android:name=".SignUp_Form"
+            android:exported="true" />
+        <activity
             android:name=".cartThree"
             android:exported="true" />
         <activity
@@ -19,20 +21,19 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-
         <activity
             android:name=".Login_Form"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
-        <activity android:name=".cartTwo">
-
-        <activity android:name=".SignUp_Form">
-
+        <activity
+            android:name=".cartTwo"
+            android:exported="true" />
+        <activity android:name=".cartFour">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
