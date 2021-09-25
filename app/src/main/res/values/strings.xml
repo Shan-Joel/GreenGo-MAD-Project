@@ -20,4 +20,5 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+    <string name="card_details">Enter Your Credit/Debit Card Details</string>
 </resources>

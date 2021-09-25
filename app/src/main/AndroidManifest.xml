@@ -10,29 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+            android:name=".card_details"
+            android:exported="true" />
+        <activity
             android:name=".payment_type"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-
         <activity
             android:name=".Login_Form"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
         <activity
-            android:name=".checkout"
+            android:name=".SignUp_Form"
             android:exported="true" />
-
-        <activity android:name=".SignUp_Form">
-
+        <activity android:name=".checkout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

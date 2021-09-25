@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment_type"
-    android:background="#421AB15B">
+    android:background="#421AB15B"
+    tools:context=".payment_type">
 
     <TextView
         android:id="@+id/tip_2"
