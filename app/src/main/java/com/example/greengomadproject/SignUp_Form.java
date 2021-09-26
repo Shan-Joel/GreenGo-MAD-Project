@@ -3,76 +3,115 @@ package com.example.greengomadproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUp_Form extends AppCompatActivity {
+import java.util.regex.Pattern;
 
-    private TextInputEditText userNameEdt, pwdEdt, emailEdt;
-    private Button registerBtn;
-    private TextView loginform;
+public class SignUp_Form extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView registerBtn;
+    private EditText userName, userEmail, userPassword;
+
     private FirebaseAuth mAuth;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_form);
 
-        userNameEdt = findViewById(R.id.editTextTextPersonName);
-        pwdEdt = findViewById(R.id.editTextTextPersonPassword);
-        emailEdt = findViewById(R.id.editTextTextPersonEmail);
-        registerBtn = findViewById(R.id.registerbtn);
+        mAuth = FirebaseAuth.getInstance();
 
-        loginform = findViewById(R.id.alreadyHaveAccount);
-        loginform.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(SignUp_Form.this, Login_Form.class);
-                startActivity(i);
-            }
-        });
+        registerBtn = (Button) findViewById(R.id.registerbtn);
+        registerBtn.setOnClickListener(this);
 
-        registerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String userName = userNameEdt.getText().toString();
-                String pwd = pwdEdt.getText().toString();
-                String email = emailEdt.getText().toString();
+        userName = (EditText) findViewById(R.id.editTextTextPersonName);
+        userEmail = (EditText) findViewById(R.id.editTextTextPersonEmail);
+        userPassword = (EditText) findViewById(R.id.editTextTextPersonPassword);
 
-                if(TextUtils.isEmpty(userName) && TextUtils.isEmpty(pwd) && TextUtils.isEmpty(email)) {
-                    Toast.makeText(SignUp_Form.this, "All Fields are Required!", Toast.LENGTH_LONG);
-                }else {
-                    mAuth.createUserWithEmailAndPassword(userName, pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()) {
-                                Toast.makeText(SignUp_Form.this, "User Registered Successfull", Toast.LENGTH_LONG);
-                                Intent i = new Intent(SignUp_Form.this, Login_Form.class);
-                                startActivity(i);
-                                finish();
-                            }else {
-                                Toast.makeText(SignUp_Form.this, "Fail to Register This User", Toast.LENGTH_LONG);
-                            }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.registerbtn:
+                registerBtn();
+                break;
+        }
+    }
+
+    private void registerBtn() {
+        String name = userName.getText().toString().trim();
+        String email = userEmail.getText().toString().trim();
+        String password = userPassword.getText().toString().trim();
+
+        if(name.isEmpty()) {
+            userName.setError("Name is Required");
+            userName.requestFocus();
+            return;
+        }
+
+        if(email.isEmpty()) {
+            userEmail.setError("Email is Required");
+            userEmail.requestFocus();
+            return;
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            userEmail.setError("Please Provide a Valid Email Address");
+            userEmail.requestFocus();
+            return;
+        }
+
+        if(password.isEmpty()) {
+            userPassword.setError("Password is Required");
+            userPassword.requestFocus();
+            return;
+        }
+
+        if(password.length() < 6) {
+            userPassword.setError("Min Password Length Should be 6 Characters");
+            userPassword.requestFocus();
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isSuccessful()) {
+                            User user = new User(name, email, password);
+
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if(task.isSuccessful()) {
+                                        Toast.makeText(SignUp_Form.this, "User Has Been Registered", Toast.LENGTH_LONG).show();
+                                    }else {
+                                        Toast.makeText(SignUp_Form.this, "Failed to Register, Try Again", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+
+                        }else {
+                            Toast.makeText(SignUp_Form.this, "Failed to Register, Try Again", Toast.LENGTH_LONG).show();
                         }
-                    });
-                }
-            }
-        });
-
-
+                    }
+                });
     }
 }
 
