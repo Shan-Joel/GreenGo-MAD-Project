@@ -30,5 +30,27 @@
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
     <string name="p03">120Per/kg</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="feedbacktext">Feedback</string>
+    <string name="btnview">View</string>
+    <string name="txt_name">Text</string>
+    <string name="txt_email">Text</string>
+    <string name="txt_feedback">Text</string>
+
+    <string name="textview">TextView</string>
+
+
+    <string name="edit_name">Enter your name</string>
+    <string name="edit_email">Enter your email address</string>
+    <string name="edit_feedback">Enter your feedback</string>
+    <string name="text_name">Text</string>
+    <string name="text_email">Text</string>
+    <string name="text_feedback">Text</string>
+    <string name="feedbackr">FEEDBACK VIEW</string>
+    <string name="name1">Monadi</string>
+    <string name="email1">Monadi@gmail.com</string>
+    <string name="fee1">Good</string>
 
 </resources>

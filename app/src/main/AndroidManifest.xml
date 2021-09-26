@@ -10,9 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
-            android:name=".feedback"
+            android:name=".FeedbackAc"
             android:exported="true" />
-
+        <activity
+            android:name=".viewfeedback"
+            android:exported="true" />
+        <activity
+            android:name=".favourits1"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -25,7 +30,7 @@
         <activity
             android:name=".Login_Form"
             android:exported="true" />
-        <activity android:name=".favourits1">
+        <activity android:name=".feedbackretreivepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
