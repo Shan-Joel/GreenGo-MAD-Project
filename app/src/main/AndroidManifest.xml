@@ -13,10 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+            android:name=".ForgotPassword"
+            android:exported="true" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Login_Form"
             android:exported="true" />
         <activity
             android:name=".SignUp_Form"
@@ -24,7 +27,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-        <activity android:name=".Login_Form">
+        <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

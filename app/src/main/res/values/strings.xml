@@ -18,4 +18,6 @@
     <string name="nameDisplayTxt">Your Name</string>
     <string name="passwordDisplayTxt">Your Password</string>
     <string name="logoutBtn">Logout</string>
+    <string name="forgotPasswordHeading">Forgot Password</string>
+    <string name="resetBtn">Reset Password</string>
 </resources>

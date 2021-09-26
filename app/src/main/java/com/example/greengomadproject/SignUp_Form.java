@@ -3,6 +3,7 @@ package com.example.greengomadproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -21,7 +22,7 @@ import java.util.regex.Pattern;
 
 public class SignUp_Form extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView registerBtn;
+    private TextView registerBtn, register;
     private EditText userName, userEmail, userPassword;
 
     private FirebaseAuth mAuth;
@@ -32,6 +33,9 @@ public class SignUp_Form extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_sign_up_form);
 
         mAuth = FirebaseAuth.getInstance();
+
+        register = (TextView) findViewById(R.id.alreadyHaveAccount);
+        register.setOnClickListener(this);
 
         registerBtn = (Button) findViewById(R.id.registerbtn);
         registerBtn.setOnClickListener(this);
@@ -47,6 +51,10 @@ public class SignUp_Form extends AppCompatActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.registerbtn:
                 registerBtn();
+                break;
+
+            case R.id.alreadyHaveAccount:
+                startActivity(new Intent(this, Login_Form.class));
                 break;
         }
     }
