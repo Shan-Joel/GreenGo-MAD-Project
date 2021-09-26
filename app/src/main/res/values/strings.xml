@@ -10,4 +10,14 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+    <string name="itemName">Item Name\\</string>
+    <string name="itemDescription">Item Description</string>
+    <string name="itemPrice">Item Price</string>
+    <string name="vegCart">Vegetables Cart</string>
+    <string name="vegLayOut">Item Name</string>
+    <string name="item_price">Price</string>
+    <string name="shoppingCart">Shopping Cart</string>
+    <color name="Black">#000000</color>
+    <color name="ExpandChilBackground">#228c22</color>
+    <color name="ExpandGroupBackground">#228c22</color>
 </resources>

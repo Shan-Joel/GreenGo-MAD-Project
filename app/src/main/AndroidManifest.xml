@@ -10,16 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
-            android:name=".SignUp_Form"
+            android:name=".cartFive"
             android:exported="true" />
         <activity
-            android:name=".cartThree"
+            android:name=".ShoppingCart"
             android:exported="true" />
         <activity
-            android:name=".cartOne"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity2"
+            android:name=".ListShoppingList"
             android:exported="true" />
         <activity
             android:name=".Login_Form"
@@ -28,9 +25,21 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".cartTwo"
+            android:name=".cartFour"
             android:exported="true" />
-        <activity android:name=".cartFour">
+        <activity
+            android:name=".SignUp_Form"
+            android:exported="true" />
+        <activity
+            android:name=".cartThree"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".cartOne"
+            android:exported="true" />
+        <activity android:name=".CreateShoppingList">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
