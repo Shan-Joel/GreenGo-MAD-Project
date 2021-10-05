@@ -102,7 +102,7 @@
         app:layout_constraintVertical_bias="0.526">
 
         <EditText
-            android:id="@+id/editTextTextPersonContactNumber"
+            android:id="@+id/editTextTextPersonPassword"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginLeft="20dp"
@@ -131,5 +131,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:layout_constraintVertical_bias="0.584" />
+
+    <TextView
+        android:id="@+id/alreadyHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alreadyHaveAccount"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerbtn"
+        app:layout_constraintVertical_bias="0.306" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

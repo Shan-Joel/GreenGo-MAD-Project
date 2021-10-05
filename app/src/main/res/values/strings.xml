@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">GreenGo MAD Project</string>
 
     <string name="favourite">FAVOURITES</string>
@@ -19,6 +20,9 @@
     <string name="add3">ADD</string>
 
 
+
+    <string name="app_name">Green Go</string>
+
     <string name="headingOneHome">GreenGo</string>
     <string name="homeHeading">GreenGo</string>
     <string name="homeaHeading2">Enjoy Eating</string>
@@ -29,6 +33,7 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+
     <string name="p03">120Per/kg</string>
     <string name="feedback">FEEDBACK</string>
     <string name="name">Name</string>
@@ -52,5 +57,18 @@
     <string name="name1">Monadi</string>
     <string name="email1">Monadi@gmail.com</string>
     <string name="fee1">Good</string>
+
+
+    <string name="alreadyHaveAccount">Already a User? Login Here</string>
+    <string name="newUserLink">New User? Register Here</string>
+    <string name="loginForgotPassword">Forgot Password</string>
+    <string name="welcomeTxt">Welcome</string>
+    <string name="emailDisplayTxt">Your Email Address</string>
+    <string name="nameDisplayTxt">Your Name</string>
+    <string name="passwordDisplayTxt">Your Password</string>
+    <string name="logoutBtn">Logout</string>
+    <string name="forgotPasswordHeading">Forgot Password</string>
+    <string name="resetBtn">Reset Password</string>
+    <string name="updateBtn">Update</string>
 
 </resources>
