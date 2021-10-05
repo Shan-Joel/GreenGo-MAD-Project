@@ -25,13 +25,23 @@ public class ProfileActivity extends AppCompatActivity {
 
     private String userID;
 
-
     private Button logout;
+
+    String name;
+    String email;
+    String password;
+
+    TextView greetingTextView;
+    TextView emailTextView;
+    TextView nameTextView;
+    TextView passwordTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
 
         logout = (Button) findViewById(R.id.logoutBtn);
 
@@ -47,10 +57,10 @@ public class ProfileActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        final TextView greetingTextView = (TextView) findViewById(R.id.welcomeTxt);
-        final TextView emailTextView = (TextView) findViewById(R.id.userEmailRetrieve);
-        final TextView nameTextView = (TextView) findViewById(R.id.userNameRetrieve);
-        final TextView passwordTextView = (TextView) findViewById(R.id.userPasswordRetrieve);
+        greetingTextView = (TextView) findViewById(R.id.welcomeTxt);
+        emailTextView = (TextView) findViewById(R.id.userEmailRetrieve);
+        nameTextView = (TextView) findViewById(R.id.userNameRetrieve);
+        passwordTextView = (TextView) findViewById(R.id.userPasswordRetrieve);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -58,9 +68,9 @@ public class ProfileActivity extends AppCompatActivity {
                 User userProfile = snapshot.getValue(User.class);
 
                 if(userProfile != null) {
-                    String name = userProfile.name;
-                    String email = userProfile.email;
-                    String password = userProfile.password;
+                    name = userProfile.name;
+                    email = userProfile.email;
+                    password = userProfile.password;
 
                     greetingTextView.setText("Welcome, " + name + "!");
                     emailTextView.setText(email);
@@ -74,6 +84,51 @@ public class ProfileActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ProfileActivity.this, "Something Wrong Happened!", Toast.LENGTH_LONG).show();
             }
+
         });
     }
+            public void update(View view) {
+                    if(isNameChanged() || isPasswordChanged() || isEmailChanged()) {
+                        Toast.makeText(ProfileActivity.this, "Data has been updated", Toast.LENGTH_LONG).show();
+                    }
+            }
+
+            private boolean isNameChanged() {
+            if(!name.equals(nameTextView.getText().toString())) {
+                reference.child(name).child("name").setValue(nameTextView.getText().toString());
+                return true;
+            }
+
+            else {
+                return false;
+            }
+        }
+
+            private boolean isPasswordChanged() {
+                if(!password.equals(nameTextView.getText().toString())) {
+                    reference.child(password).child("password").setValue(passwordTextView.getText().toString());
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            }
+
+            private boolean isEmailChanged() {
+                if(!email.equals(nameTextView.getText().toString())) {
+                    reference.child(email).child("password").setValue(emailTextView.getText().toString());
+                    return true;
+                }
+
+                else {
+                    return false;
+                }
+            }
 }
+
+
+
+
+
+

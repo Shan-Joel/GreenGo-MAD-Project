@@ -144,23 +144,40 @@
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
+    <!--  Footer Bar  -->
+
     <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:paddingLeft="50dp"
         android:paddingTop="10dp"
         android:paddingRight="50dp"
         android:paddingBottom="10dp"
         android:text="@string/logoutBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
         app:layout_constraintVertical_bias="0.369" />
 
-<!--  Footer Bar  -->
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="10dp"
+        android:text="@string/updateBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        app:layout_constraintVertical_bias="0.369"
+        android:onClick="update"/>
 
     <ImageView
         android:id="@+id/imageView19"
