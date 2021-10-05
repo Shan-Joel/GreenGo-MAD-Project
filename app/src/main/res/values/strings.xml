@@ -17,6 +17,10 @@
     <string name="vegLayOut">Item Name</string>
     <string name="item_price">Price</string>
     <string name="shoppingCart">Shopping Cart</string>
+    <string name="txtPrice">FOOD LIST</string>
+    <string name="aplPrice">Rs 100</string>
+    <string name="txtName">Apple</string>
+    <string name="foodList">FOOD LIST</string>
     <color name="Black">#000000</color>
     <color name="ExpandChilBackground">#228c22</color>
     <color name="ExpandGroupBackground">#228c22</color>

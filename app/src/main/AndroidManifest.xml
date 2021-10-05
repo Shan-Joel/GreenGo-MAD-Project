@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.greengomadproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,22 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+            android:name=".cartFour"
+            android:exported="true" />
+        <activity
             android:name=".cartFive"
-            android:exported="true" />
-        <activity
-            android:name=".ShoppingCart"
-            android:exported="true" />
-        <activity
-            android:name=".ListShoppingList"
             android:exported="true" />
         <activity
             android:name=".Login_Form"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".cartFour"
             android:exported="true" />
         <activity
             android:name=".SignUp_Form"
@@ -39,7 +35,7 @@
         <activity
             android:name=".cartOne"
             android:exported="true" />
-        <activity android:name=".CreateShoppingList">
+        <activity android:name=".foodCart">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
