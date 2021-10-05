@@ -3,6 +3,7 @@ package com.example.greengomadproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -66,4 +67,13 @@ public class ForgotPassword extends AppCompatActivity {
         });
     }
 
+    public void homeOnClick(View view) {
+        Intent i = new Intent(ForgotPassword.this, MainActivity2.class);
+        startActivity(i);
+    }
+
+    public void profileOnClick(View view) {
+        Intent newI = new Intent(ForgotPassword.this, ProfileActivity.class);
+        startActivity(newI);
+    }
 }

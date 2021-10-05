@@ -107,6 +107,7 @@ public class ProfileActivity extends AppCompatActivity {
             private boolean isPasswordChanged() {
                 if(!password.equals(passwordTextView.getText().toString())) {
                     reference.child(password).child("password").setValue(passwordTextView.getText().toString());
+                    password = passwordTextView.getText().toString();
                     return true;
                 }
 
@@ -117,7 +118,8 @@ public class ProfileActivity extends AppCompatActivity {
 
             private boolean isEmailChanged() {
                 if(!email.equals(emailTextView.getText().toString())) {
-                    reference.child(email).child("password").setValue(emailTextView.getText().toString());
+                    reference.child(email).child("email").setValue(emailTextView.getText().toString());
+                    email = emailTextView.getText().toString();
                     return true;
                 }
 
@@ -125,6 +127,11 @@ public class ProfileActivity extends AppCompatActivity {
                     return false;
                 }
             }
+
+    public void onClick(View view) {
+        Intent i = new Intent(ProfileActivity.this, Login_Form.class);
+        startActivity(i);
+    }
 }
 
 
