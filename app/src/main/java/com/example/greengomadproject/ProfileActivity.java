@@ -94,18 +94,18 @@ public class ProfileActivity extends AppCompatActivity {
             }
 
             private boolean isNameChanged() {
-            if(!name.equals(nameTextView.getText().toString())) {
-                reference.child(name).child("name").setValue(nameTextView.getText().toString());
-                return true;
-            }
+                if(!name.equals(nameTextView.getText().toString())) {
+                    reference.child(name).child("name").setValue(nameTextView.getText().toString());
+                    return true;
+                }
 
-            else {
-                return false;
+                 else {
+                    return false;
+                }
             }
-        }
 
             private boolean isPasswordChanged() {
-                if(!password.equals(nameTextView.getText().toString())) {
+                if(!password.equals(passwordTextView.getText().toString())) {
                     reference.child(password).child("password").setValue(passwordTextView.getText().toString());
                     return true;
                 }
@@ -116,7 +116,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
 
             private boolean isEmailChanged() {
-                if(!email.equals(nameTextView.getText().toString())) {
+                if(!email.equals(emailTextView.getText().toString())) {
                     reference.child(email).child("password").setValue(emailTextView.getText().toString());
                     return true;
                 }
