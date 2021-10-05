@@ -1,5 +1,28 @@
 <resources>
+
+    <string name="app_name">GreenGo MAD Project</string>
+
+    <string name="favourite">FAVOURITES</string>
+    <string name="favouritsbar">FAVOURITS</string>
+    <string name="appletext">Apple</string>
+    <string name="pick1">Pickup from organic farms</string>
+    <string name="fav">FAVOURITES</string>
+    <string name="appletext1">Apple</string>
+    <string name="pick01">Pick up from organic farms</string>
+    <string name="p01">160Per/kg</string>
+    <string name="btn1">ADD</string>
+    <string name="apprtext1">Appricot</string>
+    <string name="pick2">Pickup from organic farms</string>
+    <string name="add2">ADD</string>
+    <string name="p02">200Per/kg</string>
+    <string name="oniontext1">Onion</string>
+    <string name="pick3">Pick up from organic farms</string>
+    <string name="add3">ADD</string>
+
+
+
     <string name="app_name">Green Go</string>
+
     <string name="headingOneHome">GreenGo</string>
     <string name="homeHeading">GreenGo</string>
     <string name="homeaHeading2">Enjoy Eating</string>
@@ -10,6 +33,32 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+
+    <string name="p03">120Per/kg</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="feedbacktext">Feedback</string>
+    <string name="btnview">View</string>
+    <string name="txt_name">Text</string>
+    <string name="txt_email">Text</string>
+    <string name="txt_feedback">Text</string>
+
+    <string name="textview">TextView</string>
+
+
+    <string name="edit_name">Enter your name</string>
+    <string name="edit_email">Enter your email address</string>
+    <string name="edit_feedback">Enter your feedback</string>
+    <string name="text_name">Text</string>
+    <string name="text_email">Text</string>
+    <string name="text_feedback">Text</string>
+    <string name="feedbackr">FEEDBACK VIEW</string>
+    <string name="name1">Monadi</string>
+    <string name="email1">Monadi@gmail.com</string>
+    <string name="fee1">Good</string>
+
+
     <string name="alreadyHaveAccount">Already a User? Login Here</string>
     <string name="newUserLink">New User? Register Here</string>
     <string name="loginForgotPassword">Forgot Password</string>
@@ -21,4 +70,5 @@
     <string name="forgotPasswordHeading">Forgot Password</string>
     <string name="resetBtn">Reset Password</string>
     <string name="updateBtn">Update</string>
+
 </resources>

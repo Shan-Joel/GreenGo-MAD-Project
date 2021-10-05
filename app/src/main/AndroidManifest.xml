@@ -13,13 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+
+            android:name=".FeedbackAc"
+
             android:name=".ForgotPassword"
             android:exported="true" />
         <activity
             android:name=".ProfileActivity"
+
             android:exported="true" />
         <activity
-            android:name=".Login_Form"
+            android:name=".viewfeedback"
+            android:exported="true" />
+        <activity
+            android:name=".favourits1"
             android:exported="true" />
         <activity
             android:name=".SignUp_Form"
@@ -27,7 +34,20 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".SignUp_Form"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".Login_Form"
+            android:exported="true" />
+        <activity android:name=".feedbackretreivepage">
+
         <activity android:name=".MainActivity2">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
