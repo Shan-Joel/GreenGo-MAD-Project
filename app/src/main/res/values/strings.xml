@@ -2,6 +2,18 @@
 
     <string name="app_name">GreenGo MAD Project</string>
 
+    <string name="pay_btn">Click To Pay</string>
+    <string name="phone">Your Contact Number</string>
+    <string name="enter_details">Enter Your Delivery Details</string>
+    <string name="enter_address">Your Address</string>
+    <string name="checkout_header">Checkout</string>
+    <string name="select_payment">Choose Your Payment Method</string>
+    <string name="card_btn">One Time Payment</string>
+    <string name="cod_btn">Cash On Delivery</string>
+    <string name="tip_1">Only You Have To Make Payment To Our Delivery Agent.</string>
+    <string name="tip_2">Due to the Prevailing Situation Of the Country, Deliveries Might Get Delayed Than Usual.</string>
+
+
     <string name="favourite">FAVOURITES</string>
     <string name="favouritsbar">FAVOURITS</string>
     <string name="appletext">Apple</string>
@@ -23,6 +35,7 @@
 
     <string name="app_name">Green Go</string>
 
+
     <string name="headingOneHome">GreenGo</string>
     <string name="homeHeading">GreenGo</string>
     <string name="homeaHeading2">Enjoy Eating</string>
@@ -33,6 +46,26 @@
     <string name="registerBtn">Register</string>
     <string name="loginBtn">Login</string>
     <string name="registerbtn">Register</string>
+
+    <string name="card_details">Enter Your Credit/Debit Card Details</string>
+    <string name="amont_text">Amount :</string>
+    <string name="lkr">LKR</string>
+    <string name="total">00000.00</string>
+    <string name="save_card">Save yor card for future transactions.</string>
+    <string name="card_number">Card Nummber</string>
+    <string name="expiry_date">Expiry MM  / YY</string>
+    <string name="cvv">CVV</string>
+    <string name="pay_now_btn">PAY NOW</string>
+    <string name="done">Your Order Is Conformed !</string>
+    <string name="thank_you">Thank You For Shopping WIth Us</string>
+    <string name="saved_cards">Saved Card</string>
+    <string name="review">Rate Us</string>
+    <string name="card_number1">Card Number</string>
+    <string name="view_card">View</string>
+    <string name="update_btn">Update</string>
+    <string name="delete_btn">Delete</string>
+    <string name="your_card">Your Card</string>
+
 
     <string name="p03">120Per/kg</string>
     <string name="feedback">FEEDBACK</string>
@@ -70,5 +103,6 @@
     <string name="forgotPasswordHeading">Forgot Password</string>
     <string name="resetBtn">Reset Password</string>
     <string name="updateBtn">Update</string>
+
 
 </resources>

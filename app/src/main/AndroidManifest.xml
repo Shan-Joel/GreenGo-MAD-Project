@@ -14,6 +14,22 @@
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
 
+            android:name=".completed"
+            android:exported="true" />
+        <activity
+            android:name=".card_details"
+            android:exported="true" />
+        <activity
+            android:name=".checkout"
+            android:exported="true" />
+        <activity
+            android:name=".payment_type"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+
+
             android:name=".FeedbackAc"
 
             android:name=".ForgotPassword"
@@ -22,6 +38,7 @@
             android:name=".ProfileActivity"
 
             android:exported="true" />
+
         <activity
             android:name=".viewfeedback"
             android:exported="true" />
@@ -38,6 +55,12 @@
         <activity
             android:name=".SignUp_Form"
             android:exported="true" />
+        <activity android:name=".view_card">
+
+
+        <activity
+            android:name=".SignUp_Form"
+            android:exported="true" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
@@ -47,6 +70,7 @@
         <activity android:name=".feedbackretreivepage">
 
         <activity android:name=".MainActivity2">
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
