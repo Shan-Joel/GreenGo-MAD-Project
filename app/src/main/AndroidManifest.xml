@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenGoMADProject">
         <activity
+            android:name=".foodCart"
+            android:exported="true" />
+        <activity
             android:name=".cartFour"
             android:exported="true" />
         <activity
@@ -35,7 +38,7 @@
         <activity
             android:name=".cartOne"
             android:exported="true" />
-        <activity android:name=".foodCart">
+        <activity android:name=".addFood">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

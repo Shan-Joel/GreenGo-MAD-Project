@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addFood"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD FOOD"
+        android:textStyle="bold"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/fandv"/>
+    
+    <TextView
+        android:layout_width="70dp"
+        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:text="Image"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_image"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="70dp"
+        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:text="Name"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="70dp"
+        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:text="Price"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_add"
+        android:text="ADD"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_view"
+        android:text="VIEW"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:onClick="onclick"/>
+
+</LinearLayout>
