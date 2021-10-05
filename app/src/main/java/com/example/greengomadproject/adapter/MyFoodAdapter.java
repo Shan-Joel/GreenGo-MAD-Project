@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.greengomadproject.R;
-import com.example.greengomadproject.eventbus.MyUpdateCartEvent;
 import com.example.greengomadproject.listener.ICartLoadListener;
 import com.example.greengomadproject.listener.IRecyclerViewClickListener;
 import com.example.greengomadproject.model.CartModel;
@@ -24,8 +23,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.HashMap;
 import java.util.List;
@@ -39,12 +36,12 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
 
     private Context context;
     private List<FoodModel> foodModelList;
-    private ICartLoadListener iCartLoadListener;
 
-    public MyFoodAdapter(Context context, List<FoodModel> foodModelList, ICartLoadListener iCartLoadListener) {
+
+    public MyFoodAdapter(Context context, List<FoodModel> foodModelList) {
         this.context = context;
         this.foodModelList = foodModelList;
-        this.iCartLoadListener = iCartLoadListener;
+
     }
 
     @NonNull
@@ -62,12 +59,10 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
         holder.aplPrice.setText(new StringBuilder("Rs").append(foodModelList.get(position).getPrice()));
         holder.txtName.setText(new StringBuilder().append(foodModelList.get(position).getName()));
 
-        holder.setListener(new IRecyclerViewClickListener() {
-        });
 
     }
 
-    private void addToCart(FoodModel foodModel) {
+    /*private void addToCart(FoodModel foodModel) {
         DatabaseReference userCart = FirebaseDatabase
                 .getInstance()
                 .getReference("Cart")
@@ -90,7 +85,12 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
                                     .addOnSuccessListener(unused -> {
                                         iCartLoadListener.onCartLoadFailed("Add to Cart Success");
                                     })
-                            .addOnFailureListener(e -> iCartLoadListener.onCartLoadFailed(e.getMessage()));
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    iCartLoadListener.onCartLoadFailed(e.getMessage());
+                                }
+                            });
 
                         }
                         else
@@ -103,16 +103,8 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
                             cartModel.setQuantity(1);
                             cartModel.setTotalPrice(Float.parseFloat(foodModel.getPrice()));
 
-                            userCart.child(foodModel.getKey())
-                                    .setValue(cartModel)
-                                    .addOnSuccessListener(unused -> {
-                                        iCartLoadListener.onCartLoadFailed("Add to Cart Success");
-                                    })
-                                    .addOnFailureListener(e -> iCartLoadListener.onCartLoadFailed(e.getMessage()));
 
                         }
-                        EventBus.getDefault().postSticky(new MyUpdateCartEvent())
-
                     }
 
                     @Override
@@ -120,14 +112,14 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
                         iCartLoadListener.onCartLoadFailed(error.getMessage());
                     }
                 });
-    }
+    } */
 
     @Override
     public int getItemCount() {
         return foodModelList.size();
     }
 
-    public class MyFoodHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class MyFoodHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.imageView8)
         ImageView imageView8;
         @BindView(R.id.txtName)
@@ -135,22 +127,12 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyFoodHold
         @BindView(R.id.aplPrice)
         TextView aplPrice;
 
-        IRecyclerViewClickListener listener;
-
-        public void setListener(IRecyclerViewClickListener listener) {
-            this.listener = listener;
-        }
 
         private Unbinder unbinder;
         public MyFoodHolder(@NonNull View itemView) {
             super(itemView);
             Unbinder unbinder = ButterKnife.bind(this, itemView);
-            itemView.setOnClickListener(this);
         }
 
-        @Override
-        public void onClick(View v) {
-            listener.onRecyclerClick(v,getAdapterPosition());
-        }
     }
 }

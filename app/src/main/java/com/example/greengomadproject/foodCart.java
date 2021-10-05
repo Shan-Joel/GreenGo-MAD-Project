@@ -43,27 +43,20 @@ public class foodCart extends AppCompatActivity implements IFoodLoadListener, IC
 
     IFoodLoadListener foodLoadListener;
     ICartLoadListener cartLoadListener;
-    private Notification.Builder badge;
+    //private Notification.Builder badge;
 
-    @Override
+    /*@Override
     protected void onStart() {
         super.onStart();
         EventBus.getDefault().register(this);
     }
 
-    @Override
-    protected void onStop() {
-        if(EventBus.getDefault().hasSubscriberForEvent(MyUpdateCartEvent.class));
-            EventBus.getDefault().removeStickyEvent(MyUpdateCartEvent.class);
-            EventBus.getDefault().unregister(this);
-        super.onStop();
-    }
 
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
+     @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
     public void onUpdateCart(MyUpdateCartEvent event)
     {
         countCartItem();
-    }
+    } */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +109,7 @@ foodLoadListener.onFoodLoadFailed(error.getMessage());
 
     @Override
     public void onFoodLoadSuccess(List<FoodModel> foodModelList) {
-        MyFoodAdapter adapter =new MyFoodAdapter(this,foodModelList, cartLoadListener);
+        MyFoodAdapter adapter =new MyFoodAdapter(this,foodModelList);
         recyclerFood.setAdapter(adapter);
 
     }
@@ -133,7 +126,7 @@ foodLoadListener.onFoodLoadFailed(error.getMessage());
         int cartSum =0;
         for(CartModel cartModel: cartModelList)
             cartSum += cartModel.getQuantity();
-        badge.setNumber(cartSum);
+        //badge.setNumber(cartSum);
     }
 
     @Override
